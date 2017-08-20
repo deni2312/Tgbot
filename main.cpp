@@ -77,8 +77,9 @@ int main() {
           i=true;
         }
         cout<<message->chat->id<<"\n";
-        //bot.getApi().sendMessage(message->chat->id, "Your message is: " + message->text);
+        
         });
+	remove("example.mp4");
     signal(SIGINT, [](int s) {
 		printf("SIGINT got");
 		sigintGot = true;
