@@ -1,5 +1,4 @@
 # Tgbot
-This is a easy telegram bot video converter, already it convert only links that support.mp4 format.
-The dependencies are:
+This is a simple telegram bot video converter, which currently only converts links that support the support ".mp4" format. Dependencies are:
 Tgbot:https://github.com/reo7sp/tgbot-cpp/
 libcurl:https://curl.haxx.se
