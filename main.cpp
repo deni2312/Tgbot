@@ -80,19 +80,20 @@ int main() {
         
         });
 	remove("example.mp4");
-    signal(SIGINT, [](int s) {
-		printf("SIGINT got");
-		sigintGot = true;
-	});
-	try {
-		printf("Bot username: %s\n", bot.getApi().getMe()->username.c_str());
-		TgLongPoll longPoll(bot);
-		while (!sigintGot) {
-			printf("Long poll started\n");
-			longPoll.start();
-		}
-	} catch (exception& e) {
-		printf("error: %s\n", e.what());
-	}
+       signal(SIGINT, [](int s) {
+            printf("SIGINT got");
+            sigintGot = true;
+          });
+          TgLongPoll longPoll(bot);
+          while(!sigintGot)
+          {
+            try
+            {
+              printf("Long poll started\n");
+              longPoll.start();
+            }catch(exception& e){
+              printf("error %s\n",e.what());
+            }
+          }
     return 0;
 }
