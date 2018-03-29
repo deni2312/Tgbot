@@ -26,7 +26,7 @@ void video(std::string link)//link converter
   curl = curl_easy_init();
   if(curl)
   {
-      curl_easy_setopt(curl, CURLOPT_URL, link.c_str());
+    curl_easy_setopt(curl, CURLOPT_URL, link.c_str());
     #ifdef SKIP_PEER_VERIFICATION
       curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
     #endif
