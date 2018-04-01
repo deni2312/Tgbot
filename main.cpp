@@ -22,7 +22,7 @@ void video(std::string link)//link converter
   CURLcode res;
   static const char *pagefilename = OUTVID;
   FILE *pagefile;
-  curl_global_init(CURL_GLOBAL_DEFAULT);
+
   curl = curl_easy_init();
   if(curl)
   {
@@ -42,7 +42,7 @@ void video(std::string link)//link converter
           fclose(pagefile);
         }
     }
-  curl_global_cleanup();
+
 }
 
 void groupInfo(const Message message, const Api& api){
